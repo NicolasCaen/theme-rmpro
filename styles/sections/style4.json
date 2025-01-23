@@ -1,8 +1,8 @@
 {
     "$schema": "https:\/\/schemas.wp.org\/trunk\/theme.json",
     "version": 3,
-    "slug": "section-style1",
-    "title": "style1",
+    "slug": "section-style4",
+    "title": "style4",
     "blockTypes": [
         "core\/group",
         "core\/columns",
@@ -11,19 +11,19 @@
     ],
     "styles": {
         "color": {
-            "background": "var(--wp--preset--color--base-3)",
+            "background": "var(--wp--preset--color--base)",
             "text": "var(--wp--preset--color--contrast-2)"
         },
         "elements": {
             "button": {
                 "color": {
                     "background": "var(--wp--preset--color--accent)",
-                    "text": "var(--wp--preset--color--base-3)"
+                    "text": "var(--wp--preset--color--contrast-2)"
                 }
             },
             "heading": {
                 "color": {
-                    "text": "var(--wp--preset--color--accent)"
+                    "text": "var(--wp--preset--color--contrast-2)"
                 }
             },
             "link":{
@@ -34,6 +34,7 @@
                     "textDecoration": "none"
                   }
             }
+
         }
     }
 }
