@@ -1,0 +1,178 @@
+{
+    "version": 3,
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "title": "Inter & Anton",
+    "slug": "typography-inter-anton",
+    "settings": {
+        "typography": {
+            "fontFamilies": [
+                {
+                    "fontFamily": "inter, sans-serif",
+                    "name": "Inter",
+                    "slug": "first",
+                    "fontFace": [
+                        {
+                            "fontFamily": "inter",
+                            "fontStyle": "italic",
+                            "fontWeight": "100",
+                            "src": [
+                                "file:./assets/fonts/inter/inter-100-italic.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "inter",
+                            "fontStyle": "normal",
+                            "fontWeight": "100",
+                            "src": [
+                                "file:./assets/fonts/inter/inter-100.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "inter",
+                            "fontStyle": "italic",
+                            "fontWeight": "200",
+                            "src": [
+                                "file:./assets/fonts/inter/inter-200-italic.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "inter",
+                            "fontStyle": "normal",
+                            "fontWeight": "200",
+                            "src": [
+                                "file:./assets/fonts/inter/inter-200.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "inter",
+                            "fontStyle": "italic",
+                            "fontWeight": "300",
+                            "src": [
+                                "file:./assets/fonts/inter/inter-300-italic.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "inter",
+                            "fontStyle": "normal",
+                            "fontWeight": "300",
+                            "src": [
+                                "file:./assets/fonts/inter/inter-300.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "inter",
+                            "fontStyle": "italic",
+                            "fontWeight": "400",
+                            "src": [
+                                "file:./assets/fonts/inter/inter-400-italic.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "inter",
+                            "fontStyle": "normal",
+                            "fontWeight": "400",
+                            "src": [
+                                "file:./assets/fonts/inter/inter-400.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "inter",
+                            "fontStyle": "italic",
+                            "fontWeight": "500",
+                            "src": [
+                                "file:./assets/fonts/inter/inter-500-italic.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "inter",
+                            "fontStyle": "normal",
+                            "fontWeight": "500",
+                            "src": [
+                                "file:./assets/fonts/inter/inter-500.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "inter",
+                            "fontStyle": "italic",
+                            "fontWeight": "600",
+                            "src": [
+                                "file:./assets/fonts/inter/inter-600-italic.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "inter",
+                            "fontStyle": "normal",
+                            "fontWeight": "600",
+                            "src": [
+                                "file:./assets/fonts/inter/inter-600.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "inter",
+                            "fontStyle": "italic",
+                            "fontWeight": "700",
+                            "src": [
+                                "file:./assets/fonts/inter/inter-700-italic.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "inter",
+                            "fontStyle": "normal",
+                            "fontWeight": "700",
+                            "src": [
+                                "file:./assets/fonts/inter/inter-700.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "inter",
+                            "fontStyle": "italic",
+                            "fontWeight": "800",
+                            "src": [
+                                "file:./assets/fonts/inter/inter-800-italic.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "inter",
+                            "fontStyle": "normal",
+                            "fontWeight": "800",
+                            "src": [
+                                "file:./assets/fonts/inter/inter-800.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "inter",
+                            "fontStyle": "italic",
+                            "fontWeight": "900",
+                            "src": [
+                                "file:./assets/fonts/inter/inter-900-italic.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "inter",
+                            "fontStyle": "normal",
+                            "fontWeight": "900",
+                            "src": [
+                                "file:./assets/fonts/inter/inter-900.woff2"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fontFamily": "anton, sans-serif",
+                    "name": "Anton",
+                    "slug": "second",
+                    "fontFace": [
+                        {
+                            "fontFamily": "anton",
+                            "fontStyle": "normal",
+                            "fontWeight": "400",
+                            "src": [
+                                "file:./assets/fonts/anton/anton-400.woff2"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

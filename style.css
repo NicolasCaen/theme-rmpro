@@ -1,0 +1,74 @@
+/*
+Theme Name: theme-rmpro
+Theme URI: 
+Author: 
+Author URI: 
+Description: 
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: rmpro
+*/
+.ng1-product-categories__link {
+  text-decoration: none;
+  color: inherit;
+}
+.ng1-product-categories__item:has(.ng1-product-categories__submenu) {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.ng1-product-categories__submenu {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding-left: 0.5rem;
+}
+.ng1-product-categories .ng1-product-categories__submenu {
+  font-size: var(--wp--preset--font-size--m);
+}
+.ng1-product-categories .ng1-product-categories__submenu .ng1-product-categories__submenu {
+  gap: 0.25rem;
+  font-size: var(--wp--preset--font-size--s);
+}
+
+/*-------------------------
+GALERIE IMAGE WOOCOMMERCE
+-------------------------*/
+.woocommerce-product-gallery {
+  /* Appliquer un ratio 1/1 aux images de la galerie */
+  /* Ajuster la taille des miniatures */
+}
+.woocommerce-product-gallery__image img {
+  aspect-ratio: 1/1 !important;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+  height: 100% !important;
+}
+.woocommerce-product-gallery__image {
+  flex: 1 1 calc(25% - 10px) !important; /* Ajuster la largeur des miniatures */
+  max-width: calc(25% - 10px) !important; /* Ajuster la largeur des miniatures */
+}
+.woocommerce-product-gallery ol.flex-control-thumbs {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  padding-top: 0.5rem !important;
+  gap: 0.5rem !important; /* Espace entre les images */
+}
+
+/*-------------------------
+PRODUCT DETAILS WOOCOMMERCE
+-------------------------*/
+.wp-block-woocommerce-product-details .wc-tabs {
+  border-bottom: 1px solid black !important;
+}
+.wp-block-woocommerce-product-details .description_tab a {
+  font-size: var(--wp--preset--font-size--s) !important;
+  font-weight: normal !important;
+  padding: 0.5rem 1rem !important;
+}
+.wp-block-woocommerce-product-details .description_tab.active {
+  background: black !important;
+  color: white !important;
+  border-top-right-radius: 1rem !important;
+  border-top-left-radius: 1rem !important;
+}

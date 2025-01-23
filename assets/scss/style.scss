@@ -1,0 +1,89 @@
+/*
+Theme Name: theme-rmpro
+Theme URI: 
+Author: 
+Author URI: 
+Description: 
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: rmpro
+*/
+@import 'mixins';
+
+.ng1-product-categories{
+    &__link{
+    text-decoration: none;
+    color: inherit;
+    }
+    &__item:has(.ng1-product-categories__submenu){
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+    }
+    &__submenu{
+        display: flex;
+       flex-direction: column;
+   
+       list-style-type: none;
+       padding-left: 0.5rem;
+       .ng1-product-categories &{
+        font-size: var(--wp--preset--font-size--m);
+        .ng1-product-categories{
+            &__submenu{
+                gap: .25rem;
+                font-size: var(--wp--preset--font-size--s);
+            }
+        }
+       }
+    }
+}
+
+/*-------------------------
+GALERIE IMAGE WOOCOMMERCE
+-------------------------*/
+.woocommerce-product-gallery{
+    /* Appliquer un ratio 1/1 aux images de la galerie */
+    &__image img {
+        aspect-ratio: 1/1 !important ;
+        object-fit: cover !important ;
+        height: 100% !important ;
+    }
+
+
+    
+
+    /* Ajuster la taille des miniatures */
+    &__image {
+        flex: 1 1 calc(25% - 10px) !important ; /* Ajuster la largeur des miniatures */
+        max-width: calc(25% - 10px) !important ; /* Ajuster la largeur des miniatures */
+    }
+    ol.flex-control-thumbs{
+        display: flex !important ;
+        flex-wrap: wrap !important ;
+        padding-top: .5rem !important ;
+        gap: .5rem !important ; /* Espace entre les images */
+    }
+    
+}
+/*-------------------------
+PRODUCT DETAILS WOOCOMMERCE
+-------------------------*/
+
+.wp-block-woocommerce-product-details{
+    .wc-tabs{
+        border-bottom: 1px solid black !important ;
+    
+    }
+    .description_tab a{
+        font-size: var(--wp--preset--font-size--s) !important;
+        font-weight: normal !important;
+        padding: .5rem 1rem !important;
+    }
+    .description_tab.active{
+        background: black !important;
+        color:white !important;
+        border-top-right-radius: 1rem !important;
+        border-top-left-radius: 1rem !important;
+
+    }
+}
