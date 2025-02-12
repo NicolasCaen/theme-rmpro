@@ -101,7 +101,3 @@ details[open] summary::after {
 .admin-hidden {
   display: none !important;
 }
-
-#menu-principal {
-  display: none;
-}
