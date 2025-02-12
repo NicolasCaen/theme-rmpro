@@ -5,8 +5,9 @@
         "appearanceTools": true,
         "layout": {
             "contentSize": "760px",
-            "wideSize": "1200px"
+            "wideSize": "1240px"
         },
+        
         "color": {
             "palette": [
                 {
@@ -53,6 +54,11 @@
 					"colors": ["#111111", "#ffffff"],
 					"slug": "duotone-1",
 					"name": "Black and white"
+				},
+                {
+					"colors": [ "#ffffff","#111111"],
+					"slug": "duotone-1b",
+					"name": "white and Black"
 				},
 				{
 					"colors": ["#111111", "#C2A990"],
@@ -381,6 +387,7 @@
         }
     },
     "styles": {
+         "css": ".wp-site-blocks > * { margin-block-start: 0; margin-block-end: 0; }",
         "typography": {
             "fontFamily": "var(--wp--preset--font-family--first)",
             "fontSize": "var(--wp--preset--font-size--default)"
@@ -403,7 +410,15 @@
             }
         },
        "blocks": {
-
+                "core/query-pagination": {
+                    "elements": {
+                        "link": {
+                            "color": {
+                                "text": "var(--wp--preset--color--contrast-2)"
+                            }
+                        }
+                    }
+                },
                 "woocommerce/product-image": {
                     "spacing": {
                         "margin": {
@@ -442,7 +457,8 @@
                         }
                     },
                     "typography": {
-                        "fontSize": "var(--wp--preset--font-size--xs)"
+                        "fontSize": "var(--wp--preset--font-size--xs)",
+                        "textTransform" : "uppercase"
                     },
                     "spacing": {
                         "padding": {
@@ -455,4 +471,5 @@
                 }
             }
     }
+
 }

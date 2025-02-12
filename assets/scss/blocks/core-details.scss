@@ -1,0 +1,33 @@
+/*-------------------------
+FAQ
+-------------------------*/
+details summary{
+    border-bottom: 1px solid black;
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.125rem;
+}
+/* Masquer le marqueur par défaut */
+details summary::marker {
+    content: '';
+    display: none;
+}
+
+/* Ajouter un nouveau marqueur personnalisé */
+details summary::after {
+    content: ''; /* Vous pouvez utiliser n'importe quel caractère ou icône ici */
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2IiBmaWxsPSJub25lIj4KPHBhdGggZD0iTTEyIDZMOCAxMEw0IDYiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4=");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    margin-right: 8px; /* Ajuster l'espacement selon vos besoins */
+    color: #000; /* Ajuster la couleur selon vos besoins */
+}
+
+/* Styliser le marqueur lorsque le détail est ouvert */
+details[open] summary::after {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2IiBmaWxsPSJub25lIj4KPHBhdGggZD0iTTEyIDEwTDggNkw0IDEwIiBzdHJva2U9ImJsYWNrIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+")
+}

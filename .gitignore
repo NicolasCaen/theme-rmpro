@@ -1,0 +1,51 @@
+# Fichiers système
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs et fichiers temporaires
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*.swn
+
+# Dossiers de dépendances Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Cache et fichiers générés
+*.sass-cache
+*.scssc
+*.map
+
+# Dossiers liés à WordPress
+*.mo
+*.po
+*.pot
+__MACOSX/
+
+# Fichiers système ou de sauvegarde
+.idea/
+.vscode/
+*.iml
+
+# Backup des fichiers PHP
+*.php~
+*.php.swp
+
+# Exclure les uploads si présents (à adapter selon le besoin)
+wp-content/uploads/
+
+# Dossier build ou dist si utilisé
+build/
+dist/
+
+# Configuration Git
+.git/
+*.lock
+*.env

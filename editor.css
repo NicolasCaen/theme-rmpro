@@ -1,0 +1,107 @@
+@charset "UTF-8";
+.opacity-1 {
+  opacity: 0.1;
+}
+
+.opacity-2 {
+  opacity: 0.2;
+}
+
+.opacity-3 {
+  opacity: 0.3;
+}
+
+.opacity-4 {
+  opacity: 0.4;
+}
+
+.opacity-5 {
+  opacity: 0.5;
+}
+
+.opacity-6 {
+  opacity: 0.6;
+}
+
+.opacity-7 {
+  opacity: 0.7;
+}
+
+.opacity-8 {
+  opacity: 0.8;
+}
+
+.opacity-9 {
+  opacity: 0.9;
+}
+
+.opacity-10 {
+  opacity: 1;
+}
+
+/*-------------------------
+FAQ
+-------------------------*/
+details summary {
+  border-bottom: 1px solid black;
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.125rem;
+}
+
+/* Masquer le marqueur par défaut */
+details summary::marker {
+  content: "";
+  display: none;
+}
+
+/* Ajouter un nouveau marqueur personnalisé */
+details summary::after {
+  content: ""; /* Vous pouvez utiliser n'importe quel caractère ou icône ici */
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2IiBmaWxsPSJub25lIj4KPHBhdGggZD0iTTEyIDZMOCAxMEw0IDYiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4=");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  margin-right: 8px; /* Ajuster l'espacement selon vos besoins */
+  color: #000; /* Ajuster la couleur selon vos besoins */
+}
+
+/* Styliser le marqueur lorsque le détail est ouvert */
+details[open] summary::after {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2IiBmaWxsPSJub25lIj4KPHBhdGggZD0iTTEyIDEwTDggNkw0IDEwIiBzdHJva2U9ImJsYWNrIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+");
+}
+
+.wp-block-search__label {
+  display: none !important;
+}
+
+.wp-block-search__input {
+  font-size: 0.813rem;
+  padding: 0.5rem !important;
+  min-width: 180px;
+}
+
+.wp-block-search__button {
+  border: none;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 2.5rem;
+  color: var(--wp--preset--color--contrast-2) !important;
+}
+.entry-content .wp-block-search__button {
+  border: 1px solid var(--wp--preset--color--contrast-2) !important;
+}
+.site-header .wp-block-search__button {
+  border: none;
+}
+
+.admin-hidden {
+  display: none !important;
+}
+
+#menu-principal {
+  display: none;
+}

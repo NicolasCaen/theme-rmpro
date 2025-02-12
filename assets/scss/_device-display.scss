@@ -1,0 +1,86 @@
+// 1. Définir les variables pour les breakpoints
+$breakpoint-mobile: 400; // Mobile
+$breakpoint-tablet: 768; // Tablet
+$breakpoint-desktop: 1024; // Desktop
+
+// 2. Créer des mixins pour gérer les médias queries
+@mixin hide-on($breakpoints...) {
+  @each $breakpoint in $breakpoints {
+    @if $breakpoint == 'mobile' {
+      @include m($breakpoint-tablet - 1) {
+        display: none;
+      }
+    } @else if $breakpoint == 'tablet' {
+      @include b($breakpoint-tablet, $breakpoint-desktop - 1) {
+        display: none;
+      }
+    } @else if $breakpoint == 'desktop' {
+      @include p($breakpoint-desktop) {
+        display: none;
+      }
+    }
+  }
+}
+
+@mixin show-only-on($breakpoints...) {
+  display: none;
+
+  @each $breakpoint in $breakpoints {
+    @if $breakpoint == 'mobile' {
+      @include m($breakpoint-tablet - 1) {
+        display: block;
+      }
+    } @else if $breakpoint == 'tablet' {
+      @include b($breakpoint-tablet, $breakpoint-desktop - 1) {
+        display: block;
+      }
+    } @else if $breakpoint == 'desktop' {
+      @include p($breakpoint-desktop) {
+        display: block;
+      }
+    }
+  }
+}
+
+
+// Classes pour cacher sur un ou plusieurs devices spécifiques
+.hide-on-mobile {
+    @include hide-on('mobile');
+  }
+  
+  .hide-on-tablet {
+    @include hide-on('tablet');
+  }
+  
+  .hide-on-desktop {
+    @include hide-on('desktop');
+  }
+  
+  .hide-on-mobile-tablet {
+    @include hide-on('mobile', 'tablet');
+  }
+  
+  .hide-on-tablet-desktop {
+    @include hide-on('tablet', 'desktop');
+  }
+  
+  // Classes pour afficher uniquement sur un ou plusieurs devices spécifiques
+  .show-only-on-mobile {
+    @include show-only-on('mobile');
+  }
+  
+  .show-only-on-tablet {
+    @include show-only-on('tablet');
+  }
+  
+  .show-only-on-desktop {
+    @include show-only-on('desktop');
+  }
+  
+  .show-only-on-mobile-tablet {
+    @include show-only-on('mobile', 'tablet');
+  }
+  
+  .show-only-on-tablet-desktop {
+    @include show-only-on('tablet', 'desktop');
+  }

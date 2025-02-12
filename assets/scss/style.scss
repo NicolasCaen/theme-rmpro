@@ -10,6 +10,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: rmpro
 */
 @import 'mixins';
+@import 'device-display';
+@import 'utilities';
+@import 'blocks';
 
 .ng1-product-categories{
     &__link{
@@ -23,7 +26,6 @@ Text Domain: rmpro
     &__submenu{
         display: flex;
        flex-direction: column;
-   
        list-style-type: none;
        padding-left: 0.5rem;
        .ng1-product-categories &{
@@ -47,6 +49,7 @@ GALERIE IMAGE WOOCOMMERCE
         aspect-ratio: 1/1 !important ;
         object-fit: cover !important ;
         height: 100% !important ;
+
     }
 
 
@@ -112,46 +115,101 @@ HEADER
 /*-------------------------
 MENU
 -------------------------*/
+:root{
+    --menu-niv1-width : 300px;
+}
+.banner-menu{
+    aspect-ratio: 2/1 !important;
+}
 #menu-principal {
     position: fixed;
     top: 0;
     left: 0;
-    width: 300px; /* Ajustez la largeur selon vos besoins */
-    height: 100vh;
 
-    transform: translateX(-100%);
-    transition: transform 0.5s ease;
-    z-index: 1000;
+    //overflow: hidden;
+    .menu-open &{
+
+    
+        //min-width: 650px; /* Ajustez la largeur selon vos besoins */
+        height: 100vh;
+       // background:red;
+       transform: translateX(0);
+       transition: transform 0.5s ease;
+        z-index: 1000;
+            
+    }
+    body:not(.menu-open) &{
+        transform: translateX(calc(-1* var(--menu-niv1-width)));
+    }
 }
-
-#menu-principal.active {
-    transform: translateX(0%);
+.current-menu{
+    //background-color: pink !important;
 }
-
-.menu-niv1,
-.menu-niv2 {
+.menu-niv1{
+    margin-top: 0;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100vh;
+    display: block;
+    z-index: 1000;
+    width: var(--menu-niv1-width);
+    &.current-menu{
+   
+        z-index: 1001;
+    }
+    .ng1-product-categories__link {
+        display: block;
+        padding: 0.5rem;
+        &:hover{
+            //background-color: rgba(0, 0, 0, 0.1);
+         
+            position: relative;
+            z-index: 10;
+            &:before{
+                position: absolute;
+                left: 0;
+                top: 50%;
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                border-radius: 100%;
+                border-top: 190px solid transparent;
+                border-right: 190px solid transparent;
+                border-bottom: 190px solid transparent;
+                transform: translateY(-50%) translateX(100px);
+    
+     
+            }
+        }
 
-    transform: translateX(-100%);
-    transition: transform 0.5s ease;
-    overflow: auto;
+    }
+}
+.menu-niv2{
+    margin-top: 0;
+   transform:translateX(-98%);
+    transition : left 0s, transform 1s;
+    body.menu-niv2-is-open &{
+        transition : all 0s;
+    }
+    &.active{
+        transition : 0;
+       // min-width: 300px;
+        position: fixed;
+        top: 0;
+        transform:translateX(0);
+        z-index: 1000;
+        left: var(--menu-niv1-width); /* Positionné à côté de menu-niv1 */
+        @include m(600){
+            left: 0 !important;
+            z-index:1005
+        }
+      
+    }
 }
 
-.menu-niv1.active {
-    transform: translateX(0%); /* Le menu actif est visible */
-    z-index: 300;
-}
-.menu-niv1:not(.active){
-    z-index: 0;
-}
 
-.menu-niv2 {
-    left: 300px; /* Positionné à côté de menu-niv1 */
-}
+
 #menu-principal{
     .ng1-product-categories__item:has(.ng1-product-categories__submenu) {
         padding-top: 0;
@@ -168,4 +226,162 @@ MENU
     }
 
     
+}
+
+
+.contact-form-grid {
+
+    display: grid;
+    gap: 1rem; /* Espace entre les éléments */
+    &__container{
+      border-radius: 1rem;
+      padding: min(3rem,10%);
+      box-shadow: 0px 2px 10px 0px rgba(31, 69, 96, 0.25);
+    }
+  }
+
+  
+  /* Configuration pour les premiers 4 éléments (2 lignes à 2 colonnes) */
+  .contact-form-grid > :nth-child(-n+4) {
+    grid-column: span 1; /* Chaque élément occupe 1 colonne */
+  }
+  
+  /* Les 4 premiers éléments forment une grille 2x2 */
+  .contact-form-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes égales */
+  }
+  
+  /* À partir du 5ème élément, tout est sur une seule colonne */
+  .contact-form-grid > :nth-child(n+5) {
+    grid-column: span 2; /* Occupe toute la largeur (2 colonnes) */
+  }
+  .contact-form-grid label{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: .938rem;
+  }
+  .contact-form-grid span{
+    width: 100%;
+    display: block;
+    &.equipements-checkbox{
+
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      span{
+        width: fit-content;
+      }
+    }
+  }
+
+  .contact-form-grid input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
+  .contact-form-grid textarea,
+  .contact-form-grid select
+  {
+  border-color: transparent;
+  background-color: var(--wp--preset--color--base);
+  width: 100% !important; /* Largeur maximale */
+  box-sizing: border-box; /* Inclut les bordures et les paddings dans la largeur */
+  padding: .5rem 1rem; /* Espacement interne (optionnel) */
+  border-radius: .25rem;
+  font-size: .75rem;
+  margin-top: 0.5rem;
+}
+
+.contact-form-grid .wpcf7-list-item{
+  margin: .5rem 0 0 0!important;
+  label{
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  
+  }
+} 
+
+ input[type="submit"].wpcf7-submit{
+  margin-top: 3rem !important;
+  padding: 0.563rem 1rem !important;
+  background: var(--wp--preset--color--accent) !important;
+  border-radius: 2rem !important;
+  color:var(--wp--preset--color--black, black) !important;
+  border: 1px solid transparent;
+  font-size: .8rem;
+  text-transform: uppercase;
+  &:hover{
+    background-color:var(--wp--preset--color--black, black) !important;
+    color:white !important;
+
+  }
+}
+
+.form-group{
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap:1.5rem;
+  border-radius: .25rem;
+  background: var(--wp--preset--color--base);
+  select{
+    background: white;
+  }
+
+
+
+
+}
+
+input[type="checkbox"]{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin :0;
+    border-radius: .25rem;
+    appearance: none; /* Supprime le style par défaut */
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid #000; /* Bordure noire */
+    background-color: white; /* Fond blanc par défaut */
+    cursor: pointer;
+}
+input[type="checkbox"]:checked {
+    background-color: black; /* Fond noir quand sélectionné */
+    border-color: white; /* Bordure blanche pour contraste */
+    &:before {
+        content: ""; /* Symbole de coche */
+        height: 1rem;
+        width: 1rem;
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 30 30" width="30px" height="30px"><path d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"/></svg>');
+        background-image: url('data:image/svg+xml,%3C%3Fxml version="1.0" encoding="UTF-8"%3F%3E%3Csvg id="Calque_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 30"%3E%3C!-- Generator: Adobe Illustrator 29.2.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 116) --%3E%3Cdefs%3E%3Cstyle%3E .st0 %7B fill: %23fff; %7D %3C/style%3E%3C/defs%3E%3Cpath class="st0" d="M27.8,5.2c-.5-.5-1.1-.8-1.8-.8h0c-.6,0-1.2.3-1.6.7l-13.7,14.2-5-5.2c-.9-1-2.4-1-3.4,0-1,1-1,2.5,0,3.6l6.7,7c.5.5,1.1.7,1.7.7s1.2-.2,1.7-.7l15.4-16c.5-.5.7-1.1.7-1.8,0-.7-.2-1.3-.7-1.8Z"/%3E%3C/svg%3E');
+        background-size: contain;
+
+        display: block;
+        text-align: center;
+        font-size: 1em;
+        line-height: 1.2em;
+    }
+}
+
+
+input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
+textarea,
+select
+{
+border-color: transparent;
+background-color: var(--wp--preset--color--base);
+width: 100% !important; /* Largeur maximale */
+box-sizing: border-box; /* Inclut les bordures et les paddings dans la largeur */
+padding: .5rem 1rem; /* Espacement interne (optionnel) */
+border-radius: .25rem;
+
+}
+
+:root :where(.wp-element-button, .wp-block-button__link){
+    background:transparent;
+    border: 1px solid black;
+    font-size: 0.938rem;
+}
+.wp-block-search__input{
+    background: white !important;
+    border : 1px solid var(--wp--preset--color--base) !important;
 }

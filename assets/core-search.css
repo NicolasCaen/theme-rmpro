@@ -1,0 +1,23 @@
+.wp-block-search__label {
+  display: none !important;
+}
+
+.wp-block-search__input {
+  font-size: 0.813rem;
+  padding: 0.5rem !important;
+  min-width: 180px;
+}
+
+.wp-block-search__button {
+  border: none;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 2.5rem;
+  color: var(--wp--preset--color--contrast-2) !important;
+}
+.entry-content .wp-block-search__button {
+  border: 1px solid var(--wp--preset--color--contrast-2) !important;
+}
+.site-header .wp-block-search__button {
+  border: none;
+}

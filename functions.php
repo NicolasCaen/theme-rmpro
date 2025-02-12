@@ -1,4 +1,5 @@
 <?php
+
 // Définir la fonction pour enqueue les styles
 function enqueue_theme_styles() {
     wp_enqueue_style('main-style', get_stylesheet_uri());
@@ -18,3 +19,20 @@ function ajouter_gsap_et_scrolltrigger() {
         wp_enqueue_script('gsap-menu', get_template_directory_uri() . '/assets/js/gsap/menu.js', array('gsap', 'scrolltrigger'), null, true);
 }
 add_action('wp_enqueue_scripts', 'ajouter_gsap_et_scrolltrigger');
+
+function ajouter_faq_script() {
+
+        // Charger votre script personnalisé
+        wp_enqueue_script('faq-script', get_template_directory_uri() . '/assets/js/faq.js',"", null, true);
+}
+add_action('wp_enqueue_scripts', 'ajouter_faq_script');
+
+/**
+ * Enqueue le fichier editor.css dans l'éditeur Gutenberg
+ */
+function enqueue_gutenberg_editor_styles() {
+    if ( is_admin() ) {
+        wp_enqueue_style( 'editor-style', get_stylesheet_directory_uri( ).'/editor.css');
+    }
+}
+add_action( 'enqueue_block_assets', 'enqueue_gutenberg_editor_styles' );
