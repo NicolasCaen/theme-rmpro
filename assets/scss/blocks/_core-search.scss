@@ -27,3 +27,24 @@
         }
     }
 
+
+    .wp-block-search.rmpro-search{
+
+
+        .wp-block-search__button{
+             background:transparent;
+             border: 1px solid black;
+             font-size: 0.938rem;
+         }
+         .wp-block-search__input{
+             background: white !important;
+             border : 1px solid var(--wp--preset--color--base) !important;
+         }
+          
+     }
+
+     body.search-visible{
+        form[role="search"] +div , form[role="search"] + div + div{
+            display: none;
+        }
+     }

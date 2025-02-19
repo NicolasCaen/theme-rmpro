@@ -1,0 +1,16 @@
+.up-sells h2 {
+  font-size: var(--wp--preset--font-size--h-3);
+}
+.up-sells .product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.up-sells .product a {
+  color: inherit;
+}
+.up-sells .product a .woocommerce-loop-product__title {
+  color: inherit;
+  font-size: var(--wp--preset--font-size--h-4);
+}

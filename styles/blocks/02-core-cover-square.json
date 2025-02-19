@@ -1,0 +1,15 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "version": 3,
+    "title": "Carré",
+    "slug": "square",
+    "blockTypes": ["core/cover"],
+    "styles": {
+      "color": {
+        
+        
+        "text": "#FFFFFF"
+      },
+      "css": "aspect-ratio: 1/1"
+    }
+  }

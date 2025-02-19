@@ -1,14 +1,5 @@
-<?php
-/**
- * Title: List of posts, 1 column
- * Slug: rmpro/template-query-loop
- * Categories: query
- * Block Types: core/query
- * Description: A list of posts, 1 column, with featured image and post date.
- *
- */
+<!-- wp:template {"name":"shop-sub-category","title":"Shop Sub Category"} -->
 
-?>
 <!-- wp:query {"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true,"taxQuery":null,"parents":[]},"align":"full","layout":{"type":"default"}} -->
 <div class="wp-block-query alignfull">
 	<!-- wp:post-template {"align":"full","layout":{"type":"default"}} -->

@@ -1,0 +1,28 @@
+.up-sells{
+    h2{
+        font-size: var(--wp--preset--font-size--h-3);
+        
+    }
+    .product{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        a{
+            color:inherit;
+            .woocommerce-loop-product__title{
+                color:inherit;
+                font-size: var(--wp--preset--font-size--h-4);
+            }
+            h2{
+                text-align: center;
+            }
+            .price{
+                text-align: center;
+            }
+        }
+        .add_to_cart_button{
+            display: none !important;
+        }
+    }
+}

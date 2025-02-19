@@ -21,3 +21,13 @@
 .site-header .wp-block-search__button {
   border: none;
 }
+
+.wp-block-search.rmpro-search .wp-block-search__button, .wp-site-blocks :not(.wp-block-template-part) .wp-block-search .wp-block-search__button {
+  background: transparent;
+  border: 1px solid black;
+  font-size: 0.938rem;
+}
+.wp-block-search.rmpro-search .wp-block-search__input, .wp-site-blocks :not(.wp-block-template-part) .wp-block-search .wp-block-search__input {
+  background: white !important;
+  border: 1px solid var(--wp--preset--color--base) !important;
+}

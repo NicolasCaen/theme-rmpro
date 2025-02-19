@@ -7,16 +7,16 @@ $breakpoint-desktop: 1024; // Desktop
 @mixin hide-on($breakpoints...) {
   @each $breakpoint in $breakpoints {
     @if $breakpoint == 'mobile' {
-      @include m($breakpoint-tablet - 1) {
-        display: none;
+      @include m($breakpoint-mobile - 1) { // max-width: 399px
+        display: none!important;
       }
     } @else if $breakpoint == 'tablet' {
-      @include b($breakpoint-tablet, $breakpoint-desktop - 1) {
-        display: none;
+      @include b($breakpoint-mobile, $breakpoint-desktop - 1) { // 400px - 1023px
+        display: none!important;
       }
     } @else if $breakpoint == 'desktop' {
-      @include p($breakpoint-desktop) {
-        display: none;
+      @include p($breakpoint-desktop) { // min-width: 1024px
+        display: none!important;
       }
     }
   }
@@ -27,11 +27,11 @@ $breakpoint-desktop: 1024; // Desktop
 
   @each $breakpoint in $breakpoints {
     @if $breakpoint == 'mobile' {
-      @include m($breakpoint-tablet - 1) {
+      @include m($breakpoint-mobile - 1) {
         display: block;
       }
     } @else if $breakpoint == 'tablet' {
-      @include b($breakpoint-tablet, $breakpoint-desktop - 1) {
+      @include b($breakpoint-mobile, $breakpoint-desktop - 1) {
         display: block;
       }
     } @else if $breakpoint == 'desktop' {
@@ -42,45 +42,44 @@ $breakpoint-desktop: 1024; // Desktop
   }
 }
 
-
-// Classes pour cacher sur un ou plusieurs devices spécifiques
+// 3. Classes pour cacher sur un ou plusieurs devices spécifiques
 .hide-on-mobile {
-    @include hide-on('mobile');
-  }
-  
-  .hide-on-tablet {
-    @include hide-on('tablet');
-  }
-  
-  .hide-on-desktop {
-    @include hide-on('desktop');
-  }
-  
-  .hide-on-mobile-tablet {
-    @include hide-on('mobile', 'tablet');
-  }
-  
-  .hide-on-tablet-desktop {
-    @include hide-on('tablet', 'desktop');
-  }
-  
-  // Classes pour afficher uniquement sur un ou plusieurs devices spécifiques
-  .show-only-on-mobile {
-    @include show-only-on('mobile');
-  }
-  
-  .show-only-on-tablet {
-    @include show-only-on('tablet');
-  }
-  
-  .show-only-on-desktop {
-    @include show-only-on('desktop');
-  }
-  
-  .show-only-on-mobile-tablet {
-    @include show-only-on('mobile', 'tablet');
-  }
-  
-  .show-only-on-tablet-desktop {
-    @include show-only-on('tablet', 'desktop');
-  }
+  @include hide-on('mobile');
+}
+
+.hide-on-tablet {
+  @include hide-on('tablet');
+}
+
+.hide-on-desktop {
+  @include hide-on('desktop');
+}
+
+.hide-on-mobile-tablet {
+  @include hide-on('mobile', 'tablet');
+}
+
+.hide-on-tablet-desktop {
+  @include hide-on('tablet', 'desktop');
+}
+
+// 4. Classes pour afficher uniquement sur un ou plusieurs devices spécifiques
+.show-only-on-mobile {
+  @include show-only-on('mobile');
+}
+
+.show-only-on-tablet {
+  @include show-only-on('tablet');
+}
+
+.show-only-on-desktop {
+  @include show-only-on('desktop');
+}
+
+.show-only-on-mobile-tablet {
+  @include show-only-on('mobile', 'tablet');
+}
+
+.show-only-on-tablet-desktop {
+  @include show-only-on('tablet', 'desktop');
+}

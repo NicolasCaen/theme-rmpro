@@ -1,0 +1,21 @@
+@include m(600){
+.ng1-media-text{
+
+        &:nth-of-type(2n+1){
+            .wp-block-columns{
+
+                flex-direction: column-reverse !important;
+        
+            }
+        
+        }
+        .wp-block-column.is-vertically-aligned-center{
+            padding-top: 1rem !important;
+            padding-bottom: 1rem !important;
+        }
+        .wp-block-column.is-vertically-aligned-center{
+            align-self: auto !important;
+        }
+    
+    }
+}

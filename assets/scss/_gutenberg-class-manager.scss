@@ -1,0 +1,35 @@
+.wp-block-group .grid-4-2-1{
+    flex-wrap:wrap;
+    justify-content: center;
+    @include b(960,1280){
+        //display: none ;
+        .ng1-card-info{
+            width: 20%;
+        }
+    }
+}
+@include m(600){
+.wp-block-group .grid-3-21{
+    flex-wrap: wrap;
+    >div{
+        &:first-of-type{
+            width: 100%;
+            max-width: 100%;
+        }
+        width: 45%;
+    }
+
+
+    }
+}
+.wp-block-group.grid-4-22{
+    >div{
+        @include m(900){
+            width: 46%;
+           }
+       
+    }
+    @include m(900){
+     flex-wrap: wrap;
+    }
+}
