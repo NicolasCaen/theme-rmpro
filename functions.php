@@ -1,7 +1,13 @@
 <?php
 
-include "functions/filter-gutenberg-class.php";
-include "functions/filter-breadcrumbs-separator.php";
+include_once "functions/filter-gutenberg-class.php";
+include_once "functions/filter-breadcrumbs-separator.php";
+include_once "functions/woocommerce-filters-textes.php";
+include_once "functions/custom-class-body.php";
+include_once "functions/custom-template-manager.php";
+include_once "functions/woocommerce-cross-sell.php";
+include_once "functions/woocommerce-up-sells.php";
+
 //include "functions/hook-cart.php";
 //include "functions/custom-template-manager.php";
 
@@ -31,6 +37,25 @@ function ajouter_faq_script() {
         wp_enqueue_script('faq-script', get_template_directory_uri() . '/assets/js/faq.js',"", null, true);
 }
 add_action('wp_enqueue_scripts', 'ajouter_faq_script');
+
+function ajouter_slider_script() {
+
+        // Charger jQuery (si ce n'est pas déjà inclus)
+        wp_enqueue_script('jquery');
+    
+        // Charger le CSS de Slick.js
+        wp_enqueue_style('slick-css', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), '1.8.1');
+    
+        // Charger le JS de Slick.js
+        wp_enqueue_script('slick-js', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), '1.8.1', true);
+    
+    
+
+        wp_enqueue_script('slider-gallery-script', get_template_directory_uri() . '/assets/js/slider-gallery.js',array('jquery', 'slick-js'), null, true);
+    // Charger votre script personnalisé
+    wp_enqueue_script('slider-wc-block-product-script', get_template_directory_uri() . '/assets/js/slider-wc-block-product.js',array('jquery', 'slick-js'), null, true);
+}
+add_action('wp_enqueue_scripts', 'ajouter_slider_script');
 
 function ajouter_menu_category_script() {
 
@@ -67,6 +92,3 @@ function transform_headings_to_paragraphs_in_products($content) {
     }
     return $content;
 }
-
-// Ajoutez le filtre pour appliquer la transformation au contenu des produits
-add_filter('the_content', 'transform_headings_to_paragraphs_in_products');

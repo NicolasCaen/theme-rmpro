@@ -112,26 +112,31 @@
                     "size": "1.125rem"
                 },
                 {
+                    "fluid" :false,
                     "slug": "h-5",
                     "name": "h5 | 20",
                     "size": "1.25rem"
                 },
                 {
+                    "fluid" :false,
                     "slug": "h-4",
                     "name": "h4 | 28",
                     "size":"1.75rem"
                 },
                 {
+                    "fluid" :true,
                     "slug": "h-3",
                     "name": "h3 | 36",
                     "size": "2.25rem"
                 },
                 {
+                    "fluid" :true,
                     "slug": "h-2",
                     "name": "h2 | 42",
                     "size": "2.625rem"
                 },
                 {
+                    "fluid" :true,
                     "slug": "h-1",
                     "name": "h1 | 56",
                     "size": "3.5rem"

@@ -1,7 +1,6 @@
 .woocommerce-cart{
     .ng1-cart__cols{
-        margin-top: 3.5rem;
-        margin-bottom: 7.5rem;
+
         display: flex;
         justify-content: stretch;
        @include m(800){
@@ -10,7 +9,7 @@
        }
         column-gap:  clamp(2%, 10vw, 120px);
         row-gap: 3.5rem;
-        padding: 1rem;
+      
         .product-total, th{
             vertical-align: top !important;
         }
@@ -39,7 +38,7 @@
            
             &--a{
                 width: 705px;
-                min-width: 360px;
+                min-width: min(calc(100% - 2rem), 360px);
                 }
             &--b{
                @include p(800){
@@ -105,5 +104,22 @@
     &:hover{
         background:var(--wp--preset--color--contrast-2) !important;
         color: var(--wp--preset--color--base-3) !important;
+    }
+}
+
+.cross-sells{
+    h2{
+        font-family: var(--wp--preset--font-family--first);
+        font-size: var(--wp--preset--font-size--h-4);
+    }
+    a{
+        color:var(--wp--preset--color--contrast-2) !important;
+    }
+    img{
+        max-width: 300px;
+
+    }
+    .wp-element-button{
+        display: none !important;
     }
 }

@@ -1,0 +1,40 @@
+.wp-block-gallery.is-style-slider-1, .wp-block-gallery.is-style-slider-1-square{
+    position: relative;
+    flex-basis: 100%;
+    .slick-dots{
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+     
+        button{
+            cursor:pointer;
+            font-size: 0;
+            border-radius: 100%;
+            background:var(--wp--preset--color--base);
+            height: 1.313rem;
+            width: 1.313rem;
+            border:none;
+          
+        }
+        .slick-active button{
+            background:var(--wp--preset--color--accent);
+        }
+    }
+  
+}
+.wp-block-gallery.is-style-slider-1{
+    img{
+        aspect-ratio: 16/9;
+    }
+}
+.wp-block-gallery.is-style-slider-1-square{
+    img{
+        aspect-ratio:1;
+    }
+}

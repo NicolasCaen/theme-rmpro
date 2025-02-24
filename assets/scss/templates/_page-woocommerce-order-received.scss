@@ -1,0 +1,26 @@
+.woocommerce-order-received{
+    main{
+        padding-top: 3.5rem;
+        padding-bottom: 7.5rem;
+    }
+    .wp-block-woocommerce-order-confirmation-status{
+        background-color: black;
+        color:white;
+        padding: 1em;
+        box-sizing: border-box;
+        
+    }
+    .wp-block-woocommerce-order-confirmation-totals-wrapper{
+        padding: 1.5rem;
+        box-sizing: border-box;
+        background-color: #f5f5f5;
+    }
+    .wp-block-woocommerce-order-confirmation-additional-information{
+        padding: 1.5rem;
+        box-sizing: border-box;
+        background-color: black;
+        color:white;
+        font-size: var(--wp--preset--font-size--l);
+        text-align: center;
+    }
+}

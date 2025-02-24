@@ -7,6 +7,7 @@
  *
  */
 ?>
+
 <!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"right":"var:preset|spacing|2","left":"var:preset|spacing|2","bottom":"var:preset|spacing|8"}}},"layout":{"inherit":true,"type":"constrained"}} -->
 <main class="wp-block-group" style="padding-right:var(--wp--preset--spacing--2);padding-bottom:var(--wp--preset--spacing--8);padding-left:var(--wp--preset--spacing--2)"><!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|3","bottom":"var:preset|spacing|3"}}},"layout":{"type":"constrained"}} -->
     <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--3);padding-bottom:var(--wp--preset--spacing--3)"><!-- wp:woocommerce/breadcrumbs {"style":{"elements":{"link":{"color":{"text":"var:preset|color|contrast-2"}}}}} /--></div>
@@ -27,7 +28,11 @@
     <!-- wp:post-excerpt {"excerptLength":100,"fontSize":"l","__woocommerceNamespace":"woocommerce/product-query/product-summary"} /-->
     
     <!-- wp:woocommerce/add-to-cart-form /-->
-    
+    <!-- wp:buttons -->
+    <div class="wp-block-buttons"><!-- wp:button -->
+    <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://vetements-cyclisme.local/demande-de-devis/">Demande de devis</a></div>
+    <!-- /wp:button --></div>
+    <!-- /wp:buttons -->
     <!-- wp:woocommerce/product-meta -->
     <div class="wp-block-woocommerce-product-meta"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
     <div class="wp-block-group"><!-- wp:woocommerce/product-sku {"isDescendentOfSingleProductTemplate":true} /-->

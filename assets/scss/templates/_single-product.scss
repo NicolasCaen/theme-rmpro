@@ -1,3 +1,21 @@
+.woocommerce span.onsale{
+    background-color: var(--wp--preset--color--accent) !important;
+    color:var(--wp--preset--color--contrast-2);
+    padding: .333em 1em !important;
+    line-height: 1.5;
+    min-height: auto;
+    border-radius:2em;
+    font-size: var(--wp--preset--font-size--s);
+    font-weight: normal;
+    top: .75em;
+    left: .75em !important;
+}
+body.produit-a-la-vente{
+    .wp-block-add-to-cart-form + .wp-block-buttons {
+        display: none;
+    }
+}
+
 table.variations {
     select{
         border:1px solid black !important; 
@@ -19,7 +37,7 @@ table.variations {
          font-weight: normal !important;
          padding: .5rem 1rem !important;
      }
-     .description_tab.active{
+     li[class*="_tab"].active{
          background: black !important;
          color:white !important;
          border-top-right-radius: 1rem !important;
@@ -50,7 +68,7 @@ table.variations {
     .tabs.wc-tabs{
         .has-anchor{
             
-            font-size: var(--wp--preset--font-size--h-4);
+            font-size: var(--wp--preset--font-size--l);
             display: flex !important;
             justify-content: space-between;
             border-bottom: 1px solid var(--wp--preset--color--base) !important;
@@ -61,11 +79,6 @@ table.variations {
             }
         }
     }
-}
-
-/* Masquer l'ensemble de la liste si elle contient un seul élément <li> */
-ul.tabs.wc-tabs {
-    display: none;
 }
 
 /* Afficher la liste uniquement s'il y a plus d'un élément <li> */
@@ -97,5 +110,25 @@ ul.tabs.wc-tabs li + li ~ ul.tabs.wc-tabs {
         border-radius: .5em;
         padding: .5rem 1rem;
         display: inline-flex;
+    }
+}
+.wc-block-components-product-sku{
+    word-break: normal !important;
+} 
+
+
+.up-sells{
+    h2{
+        margin-top: 9rem;
+    }
+    a{
+        color:var(--wp--preset--color--contrast-2) !important;
+    }
+    img{
+        max-width: 300px;
+
+    }
+    .wp-element-button{
+        display: none !important;
     }
 }

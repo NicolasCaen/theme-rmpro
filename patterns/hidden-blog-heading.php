@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Hidden blog heading
- * Slug: rmpro/hidden-blog-heading
+ * Slug: theme-rmpro/hidden-blog-heading
  * Description: Hidden heading for the home page and index template.
  * Inserter: no
  *

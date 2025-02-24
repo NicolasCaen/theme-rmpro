@@ -1,0 +1,8 @@
+.wp-block-cover.is-style-default{
+    .wp-block-button__link{
+        &:hover{
+            background :var(--wp--preset--color--black);
+            color:white;
+        }
+    }
+}

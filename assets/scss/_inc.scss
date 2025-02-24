@@ -3,7 +3,12 @@
 @import 'blocks/core-search';
 @import 'blocks/breadcrumbs';
 @import 'blocks/woocommerce-tabs-panel';
+@import 'blocks/core-button';
+@import 'blocks/core-cover';
+@import 'blocks/core-gallery';
 
+@import 'blocks/woocommerce-product';
+@import 'blocks/woocommerce-product-collection';
 @import 'blocks/woocommerce-up-sells';
 
 @import 'styles/style-2';
@@ -11,3 +16,8 @@
 
 @import 'templates/single-product';
 @import 'templates/page-cart';
+@import 'templates/page-checkout';
+@import 'templates/page-de-texte';
+
+@import 'templates/page-mon-compte';
+@import 'templates/page-woocommerce-order-received';
