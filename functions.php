@@ -1,4 +1,6 @@
 <?php
+//delete_transient('block_patterns');
+//delete_transient('block_pattern_categories');
 
 include_once "functions/filter-gutenberg-class.php";
 include_once "functions/filter-breadcrumbs-separator.php";
@@ -91,4 +93,20 @@ function transform_headings_to_paragraphs_in_products($content) {
        
     }
     return $content;
+}
+
+
+function ng1_do_pattern_shortcode($shortcode) {
+    // Détecter si nous sommes dans l'éditeur Gutenberg
+    if (
+        isset($_GET['post']) || // Si nous éditons un post spécifique
+        isset($_GET['post_type']) || // Si nous créons un nouveau post
+        (defined('REST_REQUEST') && REST_REQUEST) // Si c'est une requête REST (Gutenberg utilise l'API REST)
+    ) {
+        // Pour l'éditeur Gutenberg : éviter tout échappement inutile
+        echo '<!-- wp:shortcode -->' . $shortcode . '<!-- /wp:shortcode -->';
+    } else {
+        // Pour le frontend : exécuter le shortcode avec do_shortcode()
+        echo do_shortcode($shortcode);
+    }
 }

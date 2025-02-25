@@ -32,11 +32,11 @@
 <!-- /wp:group -->
 
 <!-- wp:pattern {"slug":"theme-rmpro/product-search-form"} /--> 
- 
-<!-- wp:shortcode -->
-<?php echo do_shortcode('[ng1_product_categories parent="161"
-show_count="false" show_parent="false" depth="3" class="ng1-product-categories--one-level"]'); ?>
-<!-- /wp:shortcode --></div>
+<?php 
+ng1_do_pattern_shortcode('[ng1_product_categories parent="161"
+show_count="false" show_parent="false" depth="3" class="ng1-product-categories--one-level"]');
+?>
+</div>
 <!-- /wp:group -->
 
 <!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"bottom":"1rem"}}},"fontSize":"small","layout":{"inherit":true,"type":"constrained"}} -->

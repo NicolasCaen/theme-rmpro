@@ -1,0 +1,39 @@
+.shortcode-category-cards{
+    p{
+        display: none;
+    }
+    &__items{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        @include m(600){
+            grid-template-columns: 1fr 1fr;
+        }
+       grid-gap:1.2em;
+
+    }
+    &__item{
+        margin-bottom:1.25em;
+    }
+    &__link{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+       
+   text-decoration: none;
+   color:inherit;
+   gap:1.25em;
+   
+
+
+    }
+    &__name{
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: var(--wp--preset--font-size--medium) !important;
+    }
+    &__img{
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+}

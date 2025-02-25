@@ -24,7 +24,7 @@
 <div id="cat-menu" class="wp-block-group show-only-on-desktop">
 
 <!-- wp:pattern {"slug":"theme-rmpro/product-search-form"} /--> 
- 
+
 <!-- wp:shortcode -->
 <?php 
 echo do_shortcode('[ng1_product_categories parent="161"

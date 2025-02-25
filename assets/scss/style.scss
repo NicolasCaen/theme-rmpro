@@ -17,6 +17,12 @@ Text Domain: rmpro
 @import 'form';
 @import 'menu-category';
 
+#footer{
+    line-height: 1.2;
+    a{
+        text-decoration: none !important;
+    }
+}
 .woocommerce-account main {
 width: 100%;
 .woocommerce{

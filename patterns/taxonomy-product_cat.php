@@ -30,18 +30,10 @@
 
 <!-- wp:pattern {"slug":"theme-rmpro/product-search-form"} /--> 
  
-<!-- wp:shortcode -->
 <?php 
-if (!is_admin()) {
-echo do_shortcode('[ng1_product_categories parent="137"
-show_count="false" show_parent="false" depth="3" ]');}else{?>
-    [ng1_product_categories parent="137"
-show_count="false" show_parent="false" depth="3" ]
-<?php
-}
-?>
-
-<!-- /wp:shortcode --></div>
+ng1_do_pattern_shortcode('[ng1_product_categories parent="137"
+show_count="false" show_parent="false" depth="3" class="ng1-product-categories--one-level"]');
+?></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"tagName":"main","layout":{"inherit":true,"type":"constrained"}} -->
